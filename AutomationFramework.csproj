@@ -61,9 +61,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CreatePostsTest.cs" />
     <Compile Include="DashboardPage.cs" />
     <Compile Include="Driver.cs" />
     <Compile Include="LoginPage.cs" />
+    <Compile Include="NewPostPage.cs" />
+    <Compile Include="PostPage.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

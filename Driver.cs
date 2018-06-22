@@ -18,7 +18,7 @@ namespace UnitTestProject1
 
         internal static void Close()
         {
-            Instance.Close();
+           // Instance.Close();
 
         }
     }
