@@ -16,8 +16,9 @@ namespace UnitTestProject1
           
        
             Driver.Instance.Navigate().GoToUrl("https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F");
-            var wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            var wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(6));
             wait.Until(d => d.SwitchTo().ActiveElement().GetAttribute("id") == "usernameOrEmail");
+
         }
         public static LoginCommand LoginAs(string userName)
         {

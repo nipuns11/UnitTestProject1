@@ -8,7 +8,7 @@ namespace UnitTestProject1
         {
             get
             {
-                var title = Driver.Instance.FindElement(By.ClassName("entry-title"));
+                var title = Driver.Instance.FindElement(By.LinkText("This is a Test post title"));
                 if (title != null)
                     return title.Text;
                 return "";

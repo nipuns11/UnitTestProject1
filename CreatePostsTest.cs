@@ -22,8 +22,8 @@ namespace UnitTestProject1
             LoginPage.LoginAs("scopethesound").WithPassword("niplifeow").Login();
 
             NewPostPage.Goto();
-            NewPostPage.CreatePost("This is a Test post title").WithBody("Hi,this is the body").Publish();
-            NewPostPage.GoToNewPost();
+            NewPostPage.CreatePost("This is a Test post title").Publish();
+           // NewPostPage.GoToNewPost();
             Assert.AreEqual(PostPage.Title, "This is a Test post title","The title post did not match");
                
 
