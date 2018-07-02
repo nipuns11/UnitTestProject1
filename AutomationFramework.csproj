@@ -61,6 +61,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CheckLinks.cs" />
     <Compile Include="CreatePostsTest.cs" />
     <Compile Include="DashboardPage.cs" />
     <Compile Include="Driver.cs" />

@@ -16,9 +16,17 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
             LoginPage.GoTo();
-            LoginPage.LoginAs("scopethesound").WithPassword("******").Login();
+            LoginPage.LoginAs("scopethesound").WithPassword("niplifeow").Login();
             Assert.IsTrue(DashboardPage.IsAt, "Failed to login");
 
+        }
+        [TestMethod]
+        public void CheckTags()
+        {
+            LoginPage.GoTo();
+            LoginPage.LoginAs("scopethesound").WithPassword("niplifeow").Login();
+            CheckLinks.CheckBasicLinks();
+            
         }
         [TestCleanup]
         public void Cleanup()

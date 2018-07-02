@@ -44,6 +44,9 @@ namespace UnitTestProject1
 
         public void Login()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(4));
+                // Test the autocomplete response - Explicit Wait
+                IWebElement autocomplete = wait.Until(x => x.FindElement(By.Id("usernameOrEmail")));
                 var loginInput = Driver.Instance.FindElement(By.Id("usernameOrEmail"));
                 loginInput.SendKeys(userName);
 
