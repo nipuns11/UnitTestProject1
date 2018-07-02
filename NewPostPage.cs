@@ -42,7 +42,7 @@ namespace UnitTestProject1
     public class CreatePostCommand
     {
         public string title;
-        private string body;
+        // private string body;
 
         public CreatePostCommand(string title)
         {
