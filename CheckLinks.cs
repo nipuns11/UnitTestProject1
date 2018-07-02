@@ -15,9 +15,9 @@ namespace UnitTestProject1
             [TestMethod]
             public static void CheckBasicLinks()
             {
-            var followed =  Driver.Instance.FindElement(By.LinkText("Followed Sites")).Enabled;
+            var followed = Driver.Instance.FindElement(By.LinkText("Followed Sites"));
             
-            Assert.Equals(followed,"Followed Sites");
+            Assert.AreEqual(followed.Text, "Followed Sites");
 
 
 
