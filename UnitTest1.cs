@@ -27,7 +27,9 @@ namespace UnitTestProject1
             LoginPage.LoginAs("scopethesound").WithPassword("niplifeow").Login();
             CheckLinks.CheckBasicLinks();
             CheckLinks.CheckConvo();
-            
+            CheckLinks.Discovery();
+            CheckLinks.Search();
+            CheckLinks.Likes();
         }
         [TestCleanup]
         public void Cleanup()

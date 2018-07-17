@@ -9,13 +9,9 @@ namespace UnitTestProject1
  
         public class CheckLinks
         {
+//private static ITakesScreenshot driver;
 
 
-        [TestInitialize]
-            public void init()
-            {
-                Driver.Initialize();
-            }
             [TestMethod]
             public static void CheckBasicLinks()
             {
@@ -29,17 +25,39 @@ namespace UnitTestProject1
             {
             Driver.Instance.FindElement(By.LinkText("Conversations")).Click();
             var convo = Driver.Instance.FindElement(By.CssSelector(".empty-content__action")).Displayed;
-            //Driver.Instance.Navigate().GoToUrl("https://wordpress.com/read/conversations");
-            //WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(2));
-            //wait.Until(d => d.SwitchTo().ActiveElement().GetAttribute("CssSelector") == ".empty-content__action");
             Assert.AreEqual(true,convo );
         }
 
-            [TestCleanup]
-            public void Cleanup()
-            {
-              Driver.Close();
-            }
+        [TestMethod]
+        public static void Discovery()
+        {
+            Driver.Instance.FindElement(By.LinkText("Discover")).Click();
+            var disco = Driver.Instance.FindElement(By.LinkText("Discover")).Displayed;
+            Assert.AreEqual(true, disco);
+        }
+
+
+        [TestMethod]
+        public static void Search()
+        {
+            Driver.Instance.FindElement(By.LinkText("Search")).Click();
+            //((ITakesScreenshot)FirefoxInstance).GetScreenshot().SaveAsFile("", System.Drawing.Imaging.ImageFormat.Jpeg);
+            var search = Driver.Instance.FindElement(By.LinkText("Search")).Displayed;
+            Assert.AreEqual(true, search);
+
+        }
+
+        [TestMethod]
+        public static void Likes()
+        {
+            Driver.Instance.FindElement(By.PartialLinkText("Likes")).Click();
+            //((ITakesScreenshot)FirefoxInstance).GetScreenshot().SaveAsFile("", System.Drawing.Imaging.ImageFormat.Jpeg);
+            var  likes = Driver.Instance.FindElement(By.PartialLinkText("Likes")).Displayed;
+            Assert.AreEqual(true, likes);
+
+        }
+
+        
         }
     }
 
